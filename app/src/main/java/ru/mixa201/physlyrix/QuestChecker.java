@@ -3,15 +3,21 @@ package ru.mixa201.physlyrix;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import ru.mixa201.physlyrix.Questionary.Watcher;
 import ru.mixa201.physlyrix.R;
+import ru.mixa201.physlyrix.fragments.CalculatorFragment;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -27,6 +33,7 @@ public class QuestChecker extends AppCompatActivity {
     private String APP_PATH;
     private String pack;
     private String quest;
+    private FragmentManager manager;
 
     private TextView byId(int id){
         return (TextView)findViewById(id);
@@ -40,6 +47,11 @@ public class QuestChecker extends AppCompatActivity {
         APP_PATH=intent.getStringExtra("APP_PATH");
         pack=intent.getStringExtra("PACKAGE");
         quest=intent.getStringExtra("QUEST");
+
+        manager=getSupportFragmentManager();
+        manager.beginTransaction().replace(R.id.calculator_frame,new CalculatorFragment()).commit();
+
+
         yfttv=byId(R.id.yfttv);
         yftv=byId(R.id.yftv);
         yattv=byId(R.id.yattv);
@@ -57,6 +69,7 @@ public class QuestChecker extends AppCompatActivity {
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                manager.beginTransaction().replace(R.id.calculator_frame,new Fragment()).commit();
                 yfttv.setVisibility(View.GONE);
                 yftv.setVisibility(View.GONE);
                 yattv.setVisibility(View.GONE);

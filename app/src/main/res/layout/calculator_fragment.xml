@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Калькулятор:"
+        android:id="@+id/textView13"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="18dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ed_calc"
+        android:layout_below="@+id/textView13"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:editable="true"
+        android:numeric="decimal"
+        android:text="0" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/bt_calc_plus"
+        android:layout_below="@+id/ed_calc"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/bt_calc_minus"
+        android:layout_below="@+id/bt_calc_plus"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/bt_calc_plus"
+        android:layout_alignEnd="@+id/bt_calc_plus" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:id="@+id/bt_calc_multiply"
+        android:layout_alignTop="@+id/bt_calc_plus"
+        android:layout_toRightOf="@+id/bt_calc_plus"
+        android:layout_toEndOf="@+id/bt_calc_plus" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:id="@+id/bt_calc_divide"
+        android:layout_alignTop="@+id/bt_calc_minus"
+        android:layout_toRightOf="@+id/bt_calc_minus"
+        android:layout_alignRight="@+id/bt_calc_multiply"
+        android:layout_alignEnd="@+id/bt_calc_multiply" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sin"
+        android:id="@+id/bt_calc_sin"
+        android:layout_alignTop="@+id/bt_calc_multiply"
+        android:layout_toRightOf="@+id/bt_calc_multiply"
+        android:layout_toEndOf="@+id/bt_calc_multiply" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cos"
+        android:id="@+id/bt_calc_cos"
+        android:layout_alignTop="@+id/bt_calc_divide"
+        android:layout_toRightOf="@+id/bt_calc_divide"
+        android:layout_toEndOf="@+id/bt_calc_divide" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tan"
+        android:id="@+id/bt_calc_tan"
+        android:layout_alignTop="@+id/bt_calc_sin"
+        android:layout_toRightOf="@+id/bt_calc_sin"
+        android:layout_toEndOf="@+id/bt_calc_sin" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ctg"
+        android:id="@+id/bt_calc_ctg"
+        android:layout_alignBottom="@+id/bt_calc_cos"
+        android:layout_toRightOf="@+id/bt_calc_sin"
+        android:layout_toEndOf="@+id/bt_calc_sin" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        android:id="@+id/bt_calc_result"
+        android:layout_below="@+id/bt_calc_minus"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/bt_calc_divide"
+        android:layout_toStartOf="@+id/bt_calc_divide" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CLR"
+        android:id="@+id/bt_calc_clear"
+        android:layout_alignTop="@+id/bt_calc_result"
+        android:layout_toRightOf="@+id/bt_calc_cos"
+        android:layout_toEndOf="@+id/bt_calc_cos" />
+
+</RelativeLayout>
