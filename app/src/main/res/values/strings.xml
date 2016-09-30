@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PhysLyrix</string>
+    <string-array name="main_menu_items">
+        <item>О приложении</item>
+        <item>Тесты</item>
+        <item>Учебник</item>
+        <item>Задачник</item>
+        <item>Контрольные</item>
+        <item>Статистика</item>
+        <item>Настройки</item>
+    </string-array>
+    <string name="title_activity_content_picker">PhysLyrix</string>
+    <string name="action_settings">Settings</string>
+</resources>
