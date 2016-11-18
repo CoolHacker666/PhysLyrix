@@ -21,6 +21,7 @@ import ru.mixa201.physics.classes.Manifest;
 /**
  * Created by Admin on 12.03.2016.
  */
+
 public class ContentView extends ListActivity {
     private String action;
     private String pack;
